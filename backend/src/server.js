@@ -3,7 +3,20 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:3001",
+  "http://localhost:5000",
+  "https://frontend-or41bx6f3-ahmed-haadis-projects-16f527d0.vercel.app",
+  "https://frontend-pearl-nine-72.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  }),
+);
 app.use(express.json({ limit: "8mb" })); // fabric photos travel as compressed data URLs
 
 app.get("/api/health", (req, res) =>
