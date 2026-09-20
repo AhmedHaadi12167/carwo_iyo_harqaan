@@ -1,0 +1,63 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+frontend/.env.local
+
+# Build output
+/dist
+/build
+/.next
+/out
+.nuxt/
+.parcel-cache/
+.cache/
+.turbo/
+coverage/
+.eslintcache/
+*.tsbuildinfo
+
+# Desktop / Electron build output
+desktop/dist/
+desktop/release/
+desktop/out/
+
+# Dependency directories
+**/node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+coverage/
+
+# Tailwind / Next
+.next/
+
+# Database dumps — these contain REAL customer names, phone numbers and
+# order history. They are backups, they belong on your own machine and on
+# whatever you back up to, never in a repository that gets cloned by Render,
+# Vercel, or anyone you share the code with.
+*.sql.gz
+*.dump
+/shop.sql
+/tailors_db.sql
+/backup*.sql
+# The migrations in database/ are schema only — no customer data — so they
+# stay tracked. Only dumps at the project root are ignored.

@@ -1,0 +1,58 @@
+{
+  "name": "tailor-system-desktop",
+  "version": "1.0.0",
+  "description": "Tailor Management System — desktop app for POS",
+  "main": "main.js",
+  "author": "Tailor System",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^31.3.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.tailorsystem.pos",
+    "productName": "Tailor System",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js"
+    ],
+    "extraResources": [
+      {
+        "from": "../backend",
+        "to": "backend",
+        "filter": [
+          "src/**",
+          "package.json",
+          ".env",
+          "node_modules/**"
+        ]
+      },
+      {
+        "from": "../frontend/.next/standalone",
+        "to": "frontend"
+      },
+      {
+        "from": "../frontend/.next/static",
+        "to": "frontend/.next/static"
+      },
+      {
+        "from": "../frontend/public",
+        "to": "frontend/public"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Tailor System"
+    }
+  }
+}
