@@ -9,6 +9,7 @@ const allowedOrigins = [
   "http://localhost:5000",
   "https://frontend-or41bx6f3-ahmed-haadis-projects-16f527d0.vercel.app",
   "https://frontend-pearl-nine-72.vercel.app",
+  "https://frontend-ukgy7hjki-ahmed-haadis-projects-16f527d0.vercel.app",
 ];
 
 app.use(
